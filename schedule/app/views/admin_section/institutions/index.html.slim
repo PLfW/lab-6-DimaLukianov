@@ -1,0 +1,21 @@
+h1 Listing institutions
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @institutions.each do |institution|
+      tr
+        td = institution.name
+        td = link_to 'Show', admin_section_institution_path(institution)
+        td = link_to 'Edit', edit_admin_section_institution_path(institution)
+        td = link_to 'Destroy', admin_section_institution_path(institution), data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Institution', new_admin_section_institution_path

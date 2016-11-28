@@ -1,0 +1,12 @@
+.row.column
+  .small-12.columns
+    ul.vertical.menu data-accordion-menu="" 
+      li = link_to 'Home', root_path
+      li = link_to 'Institutions', admin_section_institutions_path
+      li = link_to 'Groups', admin_section_groups_path
+      li = link_to 'Subjects', admin_section_subjects_path
+      li = link_to 'Lessons', admin_section_lessons_path
+      li = link_to 'Users', admin_section_users_path
+      - if current_admin
+        li = link_to 'Sign Out', destroy_user_session_path, method: :delete
+      

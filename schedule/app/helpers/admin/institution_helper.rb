@@ -1,0 +1,2 @@
+module Admin::InstitutionHelper
+end

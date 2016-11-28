@@ -1,0 +1,7 @@
+.button {
+  background-color: $primary-color;
+  &.hollow {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}

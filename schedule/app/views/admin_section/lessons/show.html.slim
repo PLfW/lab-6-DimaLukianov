@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  strong Day:
+  = @lesson.day
+p
+  strong Lesson number:
+  = @lesson.lesson_number
+p
+  strong Odd week:
+  = @lesson.odd_week
+p
+  strong Subgroup:
+  = @lesson.subgroup
+p
+  strong Type:
+  = @lesson.lesson_type
+p
+  strong Classroom:
+  = @lesson.classroom
+p
+  strong User:
+  = @lesson.user.full_name
+p
+  strong Subject:
+  = @lesson.subject.name
+
+= link_to 'Edit', edit_admin_section_lesson_path(@lesson)
+'|
+= link_to 'Back', admin_section_lessons_path

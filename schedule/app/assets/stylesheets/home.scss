@@ -1,0 +1,37 @@
+.lesson {
+  text-align: left;
+  margin: 5px 0;
+  .lesson_number {
+    padding: 10px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .info {
+    text-align: right;
+  }
+  .subject {
+    font-family: sans-serif;
+    font-size: 12pt;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .lesson_type {
+    text-decoration: underline;
+    font-size: 10pt;
+    text-align: right;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .classroom {
+    text-align: right;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .teacher {
+    text-align: right;
+    margin: 0 5px;
+    
+  }
+}

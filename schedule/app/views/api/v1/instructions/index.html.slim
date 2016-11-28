@@ -1,0 +1,28 @@
+.row.columns
+  = link_to 'Home', root_path
+  hr
+  table
+    thead
+      tr
+        th Action
+        th Response
+        th Info
+    tbody
+      tr
+        td = link_to '/api/v1/institutions', api_v1_institutions_path
+        td
+          code
+            | {"institutions":[{"id": Integer, "name": String, "created_at": DateTime ,"updated_at": DateTime }, ... ]}
+        td List of institutions
+      tr
+        td = link_to '/api/v1/groups', api_v1_groups_path
+        td
+          code
+            | {"groups":[{"id": Integer ,"name": String, "created_at": DateTime, "updated_at": DateTime, "institution_id": Integer }, ... ]}
+        td List of groups
+      tr
+        td = link_to '/api/v1/lessons', api_v1_lessons_path
+        td
+          code
+            | {"lessons":[{"id": Integer, "day": String, "lesson_number": Integer, "odd_week": Boolean, "subgroup":  Integer, "lesson_type": Integer , "classroom": String ,"user_id": Integer ,"subject_id": Integer, "group_id": Integer, "created_at": DateTime, "updated_at":DateTime }, ... ]}
+        td List of lessons (schedule)

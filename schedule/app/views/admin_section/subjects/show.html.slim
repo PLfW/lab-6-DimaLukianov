@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @subject.name
+p
+  strong Institution:
+  = @subject.institution.name
+
+= link_to 'Edit', edit_admin_section_subject_path(@subject)
+'|
+= link_to 'Back', admin_section_subjects_path

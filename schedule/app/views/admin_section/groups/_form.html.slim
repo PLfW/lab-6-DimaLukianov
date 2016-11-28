@@ -1,0 +1,8 @@
+= simple_form_for([:admin_section, @group]) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.association :institution
+  .form-inputs
+    = f.input :name
+  .form-actions
+    = f.button :submit

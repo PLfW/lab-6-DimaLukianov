@@ -1,0 +1,29 @@
+= simple_form_for [:admin_section, @lesson] do |f|
+  - if @lesson.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@lesson.errors.count, "error")} prohibited this lesson from being saved:"
+      ul
+        - @lesson.errors.full_messages.each do |message|
+          li = message
+  .form-inputs
+    = f.association :group
+  .form-inputs
+    = f.association :user, collection: User.teachers.map { |u| [u.full_name, u.id] }, label: 'Teacher'
+  .form-inputs
+    = f.association :subject
+    
+
+  .field
+
+    = f.input :day, collection: Lesson.days.symbolize_keys.keys
+  .form-inputs
+    = f.input :lesson_number
+  .form-inputs
+    = f.input :odd_week
+  .form-inputs
+    = f.input :subgroup
+  .form-inputs
+    = f.input :lesson_type, collection: Lesson.lesson_types.symbolize_keys.keys
+  .form-inputs
+    = f.input :classroom
+  .form-actions = f.submit

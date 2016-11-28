@@ -1,0 +1,37 @@
+h1 Listing lessons
+
+table
+  thead
+    tr
+      th Group
+      th Day
+      th Lesson number
+      th Subject
+      th Odd week
+      th Subgroup
+      th Type
+      th Classroom
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @lessons.each do |lesson|
+      tr
+        td = lesson.group.name
+        td = lesson.day
+        td = lesson.lesson_number
+        td = lesson.subject.name
+        td = lesson.odd_week
+        td = lesson.subgroup
+        td = lesson.lesson_type
+        td = lesson.classroom
+        td = lesson.user.full_name
+        td = link_to 'Show', admin_section_lesson_path(lesson)
+        td = link_to 'Edit', edit_admin_section_lesson_path(lesson)
+        td = link_to 'Destroy', admin_section_lesson_path(lesson), data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Lesson', new_admin_section_lesson_path
