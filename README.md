@@ -14,4 +14,4 @@
 
 ## Завдання
 
-Сайт розгорнуто на (Heroku)[http://schedl.herouapp.com/].
+Сайт розгорнуто на [Heroku](http://schedl.herouapp.com/).
